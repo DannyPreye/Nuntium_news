@@ -3,6 +3,7 @@ import React from "react";
 import { Tabs } from "expo-router";
 
 import { FontAwesome5 } from "@expo/vector-icons";
+import { HomeLayout } from "../../Components";
 
 const bookmark = () => {
     return (
@@ -14,6 +15,10 @@ const bookmark = () => {
                     ),
                 }}
             />
+            <HomeLayout
+                heading={"Bookmarks"}
+                subheading={"Saved articles to the library"}
+            ></HomeLayout>
         </>
     );
 };

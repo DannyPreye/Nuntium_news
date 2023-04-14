@@ -34,7 +34,7 @@ const RecommendedCard = () => {
                                     source={{
                                         uri: news?.image_url
                                             ? news?.image_url
-                                            : "https://media.istockphoto.com/id/1182477852/photo/breaking-news-world-news-with-map-backgorund.jpg?s=612x612&w=0&k=20&c=SQfmzF39HZJ_AqFGosVGKT9iGOdtS7ddhfj0EUl0Tkc=",
+                                            : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbRaxlxQVfs3QBxs7QpGtixpAV47sMBqkMoA&usqp=CAU",
                                     }}
                                     className="w-[96px] h-[96px] rounded-[12px]"
                                 />

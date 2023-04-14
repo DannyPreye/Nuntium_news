@@ -10,7 +10,7 @@ const NewsCard = ({ news, handlePress }) => {
                 source={{
                     uri: news?.image_url
                         ? news?.image_url
-                        : "https://media.istockphoto.com/id/1182477852/photo/breaking-news-world-news-with-map-backgorund.jpg?s=612x612&w=0&k=20&c=SQfmzF39HZJ_AqFGosVGKT9iGOdtS7ddhfj0EUl0Tkc=",
+                        : "https://images.hindustantimes.com/img/2021/08/08/550x309/Breaking-News-Live-Blog-pic_1627257432413_1628466730335.jpg",
                 }}
                 className="flex-1"
             >

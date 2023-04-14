@@ -27,7 +27,7 @@ const category = () => {
                         <Topic
                             title={topic.title}
                             selected={selected}
-                            key={`cate_${id}`}
+                            key={`cate                             _${id}`}
                             handlePress={() => {
                                 if (selected.includes(topic.title)) {
                                     setSelected(
