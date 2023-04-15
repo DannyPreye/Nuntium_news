@@ -1,13 +1,15 @@
 import { View, Text } from "react-native";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Tabs } from "expo-router";
 import { SimpleLineIcons } from "@expo/vector-icons";
 import { HomeLayout } from "../../Components";
 import { topics } from "../../lib/constants";
 import Topic from "../../Components/Topic";
+import { store } from "../../Components/Context/DataContext";
 
 const category = () => {
-    const [selected, setSelected] = useState([]);
+    // const [selected, setSelected] = useState([]);
+    const { selected, saveSelectedCategory } = useContext(store);
 
     return (
         <>
@@ -29,15 +31,7 @@ const category = () => {
                             selected={selected}
                             key={`cate                             _${id}`}
                             handlePress={() => {
-                                if (selected.includes(topic.title)) {
-                                    setSelected(
-                                        selected.filter(
-                                            (item) => item !== topic.title
-                                        )
-                                    );
-                                } else {
-                                    setSelected([...selected, topic.title]);
-                                }
+                                saveSelectedCategory(topic.title);
                             }}
                         />
                     ))}

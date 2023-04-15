@@ -1,9 +1,17 @@
-import { View, Text, TouchableOpacity, ImageBackground } from "react-native";
-import React from "react";
+import {
+    View,
+    Text,
+    TouchableOpacity,
+    ImageBackground,
+    ToastAndroid,
+} from "react-native";
+import React, { useContext } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { FontAwesome } from "@expo/vector-icons";
+import { bookMarkContext } from "./Context/BookMarkContext";
 
 const NewsCard = ({ news, handlePress }) => {
+    const { saveBookMark } = useContext(bookMarkContext);
     return (
         <TouchableOpacity className="w-[256px] h-[256px] rounded-[12px] overflow-hidden">
             <ImageBackground
@@ -23,7 +31,10 @@ const NewsCard = ({ news, handlePress }) => {
                         "rgba(34, 36, 47, 0.16)",
                     ]}
                 >
-                    <TouchableOpacity className="items-end">
+                    <TouchableOpacity
+                        onPress={() => saveBookMark(news)}
+                        className="items-end"
+                    >
                         <FontAwesome
                             name="bookmark-o"
                             size={24}

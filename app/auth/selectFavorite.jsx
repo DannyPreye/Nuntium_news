@@ -1,13 +1,15 @@
 import { View, ScrollView } from "react-native";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { AuthLayout } from "../../Components";
 import { topics } from "../../lib/constants";
 import Topic from "../../Components/Topic";
 import { Button } from "../../Components/form";
 import { useRouter } from "expo-router";
+import { bookMarkContext } from "../../Components/Context/BookMarkContext";
+import { store } from "../../Components/Context/DataContext";
 
 const selectFavorite = () => {
-    const [selected, setSelected] = useState([]);
+    const { selected, saveSelectedCategory } = useContext(store);
     const router = useRouter();
     return (
         <AuthLayout
@@ -23,17 +25,9 @@ const selectFavorite = () => {
                             title={topic.title}
                             selected={selected}
                             key={`topic_${id}`}
-                            handlePress={() => {
-                                if (selected.includes(topic.title)) {
-                                    setSelected(
-                                        selected.filter(
-                                            (item) => item !== topic.title
-                                        )
-                                    );
-                                } else {
-                                    setSelected([...selected, topic.title]);
-                                }
-                            }}
+                            handlePress={() =>
+                                saveSelectedCategory(topic.title)
+                            }
                         />
                     ))}
                 </View>
