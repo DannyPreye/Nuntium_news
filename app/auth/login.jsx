@@ -21,7 +21,7 @@ const login = () => {
     const router = useRouter();
     return (
         <SafeAreaView
-            className="flex-1 px-5  "
+            className="flex-1 px-5 bg-[#E5E5E5] "
             style={{
                 marginTop:
                     Platform.OS === "android" ? StatusBar.currentHeight : 0,

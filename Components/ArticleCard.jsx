@@ -7,7 +7,9 @@ const ArticleCard = ({ news }) => {
     return (
         <TouchableOpacity
             onPress={() => {
-                router.push(`home/article/${news?.title.split(" ").join("-")}`);
+                router.push(
+                    `home/bookmark/${news?.title.split(" ").join("-")}`
+                );
             }}
             className="flex-row items-center space-x-[16px]"
         >

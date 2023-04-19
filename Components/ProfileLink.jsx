@@ -4,7 +4,7 @@ import React from "react";
 const ProfileLink = ({ title, children }) => {
     return (
         <View className="w-full h-[56px] mt-[16px] bg-[#F3F4F6] items-center rounded-[12px] px-[24px] py-[16px] flex-row justify-between ">
-            <Text className="font-[600] text-[16px] text-black-primary">
+            <Text className="font-[600] text-[16px] text-[#666c8e]">
                 {title}
             </Text>
 

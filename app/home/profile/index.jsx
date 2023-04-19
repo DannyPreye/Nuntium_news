@@ -1,24 +1,23 @@
 import { View, Text, Switch } from "react-native";
 import React from "react";
-import { Tabs } from "expo-router";
+import { Stack, Tabs, useRouter } from "expo-router";
 
 import { FontAwesome, Feather } from "@expo/vector-icons";
 import { HomeLayout, ProfileLink } from "../../../Components";
+import { TouchableOpacity } from "react-native";
 
 const Profile = () => {
+    const router = useRouter();
     const name = "John Doe";
     const email = "johndoe@gmail.com";
     const [isEnabled, setIsEnabled] = React.useState(false);
     return (
         <>
-            <Tabs.Screen
+            <Stack.Screen
                 options={{
-                    tabBarIcon: ({ color }) => (
-                        <Feather name="user" size={24} color={color} />
-                    ),
+                    headerShown: false,
                 }}
             />
-
             <HomeLayout heading={"Profile"}>
                 <View className="flex-1 w-full items-start mt-[32px]">
                     <View className="flex-row space-x-[24px] items-center">
@@ -39,6 +38,7 @@ const Profile = () => {
                         </View>
                     </View>
                     <View className="mt-[32] items-center w-full  ">
+                        {/* Notification */}
                         <ProfileLink title={"Notification"}>
                             <Switch
                                 trackColor={{ true: "#475AD7" }}
@@ -49,12 +49,56 @@ const Profile = () => {
                                 value={isEnabled}
                             />
                         </ProfileLink>
+
+                        {/* Language */}
                         <ProfileLink title={"Language"}>
-                            <Feather
-                                name="chevron-right"
-                                size={24}
-                                color="black"
-                            />
+                            <TouchableOpacity
+                                onPress={() =>
+                                    router.push("./profile/language")
+                                }
+                            >
+                                <Feather
+                                    name="chevron-right"
+                                    size={24}
+                                    color="#666c8e"
+                                />
+                            </TouchableOpacity>
+                        </ProfileLink>
+                        <ProfileLink title={"Change Password"}>
+                            <TouchableOpacity>
+                                <Feather
+                                    name="chevron-right"
+                                    size={24}
+                                    color="#666c8e"
+                                />
+                            </TouchableOpacity>
+                        </ProfileLink>
+                        <ProfileLink title={"Privacy"}>
+                            <TouchableOpacity>
+                                <Feather
+                                    name="chevron-right"
+                                    size={24}
+                                    color="#666c8e"
+                                />
+                            </TouchableOpacity>
+                        </ProfileLink>
+                        <ProfileLink title={"Terms & Conditions"}>
+                            <TouchableOpacity>
+                                <Feather
+                                    name="chevron-right"
+                                    size={24}
+                                    color="#666c8e"
+                                />
+                            </TouchableOpacity>
+                        </ProfileLink>
+                        <ProfileLink title={"Sign Out"}>
+                            <TouchableOpacity>
+                                <Feather
+                                    name="log-in"
+                                    size={24}
+                                    color="#666c8e"
+                                />
+                            </TouchableOpacity>
                         </ProfileLink>
                     </View>
                 </View>

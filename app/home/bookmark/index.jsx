@@ -3,8 +3,8 @@ import { useContext } from "react";
 import { Tabs } from "expo-router";
 
 import { FontAwesome5 } from "@expo/vector-icons";
-import { ArticleCard, HomeLayout } from "../../Components";
-import { bookMarkContext } from "../../Components/Context/BookMarkContext";
+import { ArticleCard, HomeLayout } from "../../../Components";
+import { bookMarkContext } from "../../../Components/Context/BookMarkContext";
 import { Feather } from "@expo/vector-icons";
 
 const bookmark = () => {
@@ -12,13 +12,6 @@ const bookmark = () => {
 
     return (
         <>
-            <Tabs.Screen
-                options={{
-                    tabBarIcon: ({ color }) => (
-                        <FontAwesome5 name="bookmark" size={24} color={color} />
-                    ),
-                }}
-            />
             <HomeLayout
                 heading={"Bookmarks"}
                 subheading={"Saved articles to the library"}

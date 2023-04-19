@@ -17,7 +17,7 @@ const AuthLayout = ({ children, heading, writeUp }) => {
                 marginTop:
                     Platform.OS == "android" ? StatusBar.currentHeight : 0,
             }}
-            className="flex-1 items-center "
+            className="flex-1 items-center bg-[#E5E5E5] "
         >
             <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
                 <>
