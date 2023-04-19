@@ -6,3 +6,4 @@ export { default as NewsCard } from "./NewsCard";
 export { default as RecommendedCard } from "./RecommendedCard";
 export { default as ArticleCard } from "./ArticleCard";
 export { default as ProfileLink } from "./ProfileLink";
+export { default as ProfileLayout } from "./ProfileLayout";

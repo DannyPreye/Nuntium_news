@@ -2,10 +2,10 @@ import { View, Text } from "react-native";
 import React, { useContext, useState } from "react";
 import { Tabs } from "expo-router";
 import { SimpleLineIcons } from "@expo/vector-icons";
-import { HomeLayout } from "../../Components";
-import { topics } from "../../lib/constants";
-import Topic from "../../Components/Topic";
-import { store } from "../../Components/Context/DataContext";
+import { HomeLayout } from "../../../Components";
+import { topics } from "../../../lib/constants";
+import Topic from "../../../Components/Topic";
+import { store } from "../../../Components/Context/DataContext";
 
 const category = () => {
     // const [selected, setSelected] = useState([]);

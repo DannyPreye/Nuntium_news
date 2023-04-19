@@ -54,7 +54,7 @@ const Profile = () => {
                         <ProfileLink title={"Language"}>
                             <TouchableOpacity
                                 onPress={() =>
-                                    router.push("./profile/language")
+                                    router.push("/home/profile/language")
                                 }
                             >
                                 <Feather
@@ -65,7 +65,11 @@ const Profile = () => {
                             </TouchableOpacity>
                         </ProfileLink>
                         <ProfileLink title={"Change Password"}>
-                            <TouchableOpacity>
+                            <TouchableOpacity
+                                onPress={() =>
+                                    router.push("/home/profile/change_password")
+                                }
+                            >
                                 <Feather
                                     name="chevron-right"
                                     size={24}
@@ -74,7 +78,11 @@ const Profile = () => {
                             </TouchableOpacity>
                         </ProfileLink>
                         <ProfileLink title={"Privacy"}>
-                            <TouchableOpacity>
+                            <TouchableOpacity
+                                onPress={() =>
+                                    router.push("/home/profile/privacy")
+                                }
+                            >
                                 <Feather
                                     name="chevron-right"
                                     size={24}
@@ -83,7 +91,11 @@ const Profile = () => {
                             </TouchableOpacity>
                         </ProfileLink>
                         <ProfileLink title={"Terms & Conditions"}>
-                            <TouchableOpacity>
+                            <TouchableOpacity
+                                onPress={() =>
+                                    router.push("/home/profile/terms")
+                                }
+                            >
                                 <Feather
                                     name="chevron-right"
                                     size={24}

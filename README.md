@@ -1,15 +1,33 @@
-# Expo Router Example
+# Nuntium News App
 
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
+A news app that allows users to register, login and read and bookmark news for later read. This project was built using React native expo and nativewind(TailwindCSS). the news data displayed on the app was retrieved from [`New api`](https://newsdata.io/api)
 
-## 🚀 How to use
+check out the live preview on expo [`here`](exp://exp.host/@dannypreye/news_app?release-channel=default)
 
-```sh
-npx create-react-native-app -t with-router
-```
+## Screenshots
 
-## 📝 Notes
+Splash screen
+<img src="./assets/git/splash.jpg" align="center" />
 
-- [Expo Router: Docs](https://expo.github.io/router)
-- [Expo Router: Repo](https://github.com/expo/router)
-- [Request for Comments](https://github.com/expo/router/discussions/1)
+onboading screen
+<img src="./assets/git/home.jpg" align="center" />
+
+login screen
+<img src="./assets/git/login.jpg" align="center" />
+
+home screen
+<img src="./assets/git/homepage.jpg" align="center" />
+
+News screen
+<img src="./assets/git/readnews.jpg" align="center" />
+
+Profile screen
+<img src="./assets/git/prof.jpg" align="center" />
+
+## Getting Started
+
+run this command on your terminal to clone the repo
+`git clone https://github.com/DannyPreye/Nuntium_news.git`
+
+cd into the directory and run
+`npm install` to install all the dependencies
